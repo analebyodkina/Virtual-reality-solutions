@@ -1,0 +1,129 @@
+.subscribe-section {
+    box-shadow: 0px 22px 18px rgba(0, 0, 0, 0.05);
+    border-radius: 34px;
+    background: $grad-subscr;
+    border: 1px solid;
+    border-image-source: linear-gradient(97.12deg, rgba(255, 255, 255, 0.08) -3.52%, rgba(255, 255, 255, 0.07) 100.35%);
+    padding: 50px 155px 38px;
+    text-align: center;
+    margin-bottom: 98px;
+    @include tablet {
+        padding: 50px 80px 38px;
+    }
+    @include tablet-small {
+        padding-bottom: 150px;
+    }
+    &__title {
+        @include text($ff, 700, 4.2rem, 5.5rem, $white);
+        margin-bottom: 13px;
+    }
+    &__desc {
+        @include text($ff, 400, 1.6rem, 3rem, $white);
+        opacity: 0.8;
+        margin-bottom: 29px;
+    }
+    &__form {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: $grad-input;
+        border-radius: 70px;
+        box-shadow: 10px 24px 54px rgba(0, 0, 0, 0.07);
+        justify-content: space-between;
+        padding: 10px 10px 10px 0;
+        @include tablet-small {
+            flex-direction: column;
+            position: relative;                       
+        }
+        &:focus {
+            border: 1px solid $primary;
+        }
+        input {
+            width: 100%;
+            background: transparent;            
+            border-radius: 70px;
+            padding: 15px 15px 15px 44px;
+            border: 0;
+            outline: 0;            
+            @include text($ff, 400, 1.6rem, 2.6rem, $white);
+            &::placeholder {
+                @include text($ff, 400, 1.8rem, 3rem, $white); 
+                opacity: 0.9;                            
+            }         
+        }
+    }
+    &__form .btn {
+        @include text($ff, 500, 2rem, 3rem, $white);
+        opacity: 0.9;
+        border-radius: 70px;
+        padding: 15px 49px 15px 26px; 
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        @include tablet-small {            
+            position: absolute; 
+            top: 100px;                      
+        }
+        
+    }  
+
+    
+}
+
+
+// &__form {
+//     width: 100%;
+//     background: #F9F1FE;
+//     border-radius: 50px; 
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between;
+//     padding: 10px 14px 10px 0;
+//     @include tablet-small-768 {
+//         position: relative;
+//     }
+//     @include mobile-576 {
+//         width: auto;
+//     }  
+//     input {  
+//         width: 100%;                     
+//         border: 0;
+//         outline: 0;
+//         border-radius: 50px;
+//         background: $color-cards;
+//         padding: 0 20px 0 30px;
+//         &::placeholder {
+//             @include text($ff, 16px, 19px, 400, $color-grey);
+//         }            
+//     }
+//     button { 
+//         background: $color-primary;
+//         border: 0;
+//         outline: 0;
+//         border-radius: 50px;
+//         padding: 10px 49px; 
+//         cursor: pointer; 
+//         &:active {
+//             animation: scale-down-center 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both normal;
+//             @keyframes scale-down-center {
+//                 0% {
+//                   -webkit-transform: scale(1);
+//                           transform: scale(1);
+//                 }
+//                 100% {
+//                   -webkit-transform: scale(0.93);
+//                           transform: scale(0.93);
+//                 }
+//               }
+//         }
+//         @include tablet-small-768 {
+//            position: absolute;
+//            top: 60px;
+//            left: 50%;
+//            transform: translateX(-50%);
+//         }             
+//     } 
+// }
+// &__btn {
+//     @include text($ff, 20px, 23px, 600, $color-cards)
+// }

@@ -1,0 +1,65 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+html {
+	font-size: 10px;
+}
+body {
+	font-family: $ff;
+	background: $bg;
+}
+.container {
+	padding: 0 20px;
+	max-width: $container;
+	margin-inline: auto;
+}
+.overflow-y-hidden {
+	overflow-y: hidden;
+}
+.title {
+	@include text($ff, 700, 4.2rem, 5.5rem, $white);
+	margin-bottom: 30px;
+	text-align: center;
+}
+.desc {
+	text-align: center;
+	max-width: 587px;
+	margin-inline: auto;
+	margin-bottom: 40px;
+	@include text($ff, 400, 1.6rem, 2.6rem, $white);
+}
+.btn {
+	display: inline-block;
+	border: 0;
+	outline: 0;
+	cursor: pointer;
+	text-align: center;
+	@include btn-active;
+	transition: $transition;
+		&:hover {
+			text-decoration: underline;
+		}
+	&._primary {
+		background: $grad-btn;
+		border-radius: 5px;
+		padding: 12px 28px;
+		@include text($ff, 500, 1.4rem, 1.8rem, $grey);
+	}
+	&_secondary {
+		background: $primary;
+		border-radius: 22px;
+		padding: 10px 25px;
+		@include text($ff, 600, 20px, 23px, $white);
+	}
+}
+.link {
+	display: inline-flex;
+	align-items: center;
+	gap: 20px;
+	@include text($ff, 500, 1.6rem, 2.1rem, $grey);
+}
+.material-icons {
+	cursor: pointer;
+}

@@ -1,0 +1,13 @@
+@import 'normalise';
+@import 'vars';
+@import 'mixins';
+@import 'base';
+
+
+@import 'blocks/header';
+@import 'blocks/main-section';
+@import 'blocks/service-section';
+@import 'blocks/care-section';
+@import 'blocks/team-section';
+@import 'blocks/subscribe-section';
+@import 'blocks/footer';

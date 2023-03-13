@@ -1,0 +1,88 @@
+.service-section {
+	@include tablet {
+		margin-top: 200px;
+	}
+	margin-bottom: 120px;
+}
+.service-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+	gap: 30px;
+	text-align: center;
+	@include mobile {
+		grid-template-columns: 1fr;
+	}
+	&__item {
+		background: $grad-card;
+		box-shadow: 0px 22px 18px rgba(0, 0, 0, 0.05);
+		border-radius: 34px;
+		padding: 37px 23px 30px 23px;
+		color: $white;
+		transition: $transition;
+		&:hover {
+			box-shadow: 1px 1px 20px $white;
+			transform: scale(1.05);
+		}
+	}
+	&__img {
+		width: 74px;
+		height: 74px;
+		margin-inline: auto;
+		border-radius: 55px;
+		padding: 18px;
+		margin-bottom: 19px;
+		&._img1 {
+			background: linear-gradient(180deg, #8A7FD9 0%, #402F8F 100%);
+		}
+		&._img2 {
+			background: linear-gradient(180deg, #D97F95 0%, #923250 100%);
+		}
+		&._img3 {
+			background: linear-gradient(180deg, #84D8ED 0%, #4292BB 100%);
+		}
+		&._img4 {
+			background: linear-gradient(180deg, #92EFC3 0%, #2F8F5B 100%);
+		}
+		&._img5 {
+			background: linear-gradient(180deg, #BC7FD9 0%, #923283 100%);
+		}
+		&._img6 {
+			background: linear-gradient(180deg, #8684ED 0%, #4247BB 100%);
+		}
+	}
+	&__title {
+		margin-bottom: 17px;
+		@include text($ff, 500, 2.4rem, 3.1rem, $white);
+	}
+	&__desc {
+		margin-bottom: 24px;
+		@include text($ff, 400, 1.6rem, 2.6rem, $white);
+	}
+	&__action {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		gap: 5px;
+		@include text($ff, 400, 1.6rem, 2.6rem, $white);
+		span:first-child {
+			transition: $transition;
+			&:after {
+			content: "";
+			background-color: $primary;
+			display: block;
+			height: 3px;
+			width: 0%;
+			position: relative;
+			top: 3px;
+			-webkit-transition: width .3s ease-in-out;
+			-moz--transition: width .3s ease-in-out;
+			transition: width .3s ease-in-out;
+			}
+			&:hover:after, &:active:after {
+    		width: 100%;
+			}
+		}
+		
+		
+	}
+}

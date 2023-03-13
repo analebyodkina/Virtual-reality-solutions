@@ -1,0 +1,77 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 40px;
+	@include tablet {
+		padding: 40px 0;
+	}
+	&__logo {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		@include text($ff, 500, 2rem, 2.4rem, $white);
+	}
+}
+.nav {
+	&__ul {
+		display: flex;
+		align-items: center;
+		gap: 60px;
+		@include tablet {
+			z-index: 99;
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			overflow-y: auto;
+			background: $darkpurple;
+			left: 0;
+			top: 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			transition: $transition;
+			transform: translateX(-120%);
+			&._active {
+				transform: translateX(0);
+			}
+			.nav__a {
+				font-size: 2.1rem;
+				line-height: 2.9rem;				
+			}
+			.icon-close {
+				position: absolute;
+				top: 40px;
+				right: 20px;
+			}
+		}
+	}
+	.icon-menu,
+	.icon-close {
+		display: none;
+		color: $white;
+		@include tablet {
+			display: inline-block;
+		}
+	}
+	&__a {
+		@include text($ff, 500, 1.4rem, 1.8rem, $grey);
+		transition: $transition;
+		&:after {
+			content: "";
+			background-color: $primary;
+			display: block;
+			height: 3px;
+			width: 0%;
+			position: relative;
+			top: 3px;
+			-webkit-transition: width .3s ease-in-out;
+			-moz--transition: width .3s ease-in-out;
+			transition: width .3s ease-in-out;
+		}
+		&:hover:after, &:focus:after {
+    	width: 100%;
+		}
+	}
+}

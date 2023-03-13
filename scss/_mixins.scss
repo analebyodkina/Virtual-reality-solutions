@@ -1,0 +1,46 @@
+@mixin text($ff, $fw, $fz, $lh, $color) {
+    font-family: $ff;
+    font-weight: $fw;
+    font-size: $fz;
+    line-height: $lh;
+    color: $color;
+}
+@mixin btn-active {
+  &:active {
+    animation: scale-down-center 0.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) both normal;
+    @keyframes scale-down-center {
+        0% {
+          -webkit-transform: scale(1);
+                  transform: scale(1);
+        }
+        100% {
+          -webkit-transform: scale(0.93);
+                  transform: scale(0.93);
+        }
+    }
+  } 
+}
+
+@mixin desktop-small {
+    @media (max-width: $desktop-small) {
+      @content;
+    }
+  }
+  
+  @mixin tablet-small {
+    @media (max-width: $tablet-small) {
+      @content;
+    }
+  }
+  
+  @mixin tablet {
+    @media (max-width: $tablet) {
+      @content;
+    }
+  }
+  
+  @mixin mobile {
+    @media (max-width: $mobile) {
+      @content;
+    }
+  }

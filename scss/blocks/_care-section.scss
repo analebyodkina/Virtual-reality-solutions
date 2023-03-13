@@ -1,0 +1,23 @@
+.care-section {
+    display: grid;
+    gap: 57px;
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }    
+    &__info {
+        max-width: 582px;        
+    }     
+    
+    &__title {
+        @include text($ff, 700, 4.2rem, 5.5rem, $white);
+        margin-bottom: 30px;
+    }
+    &__desc {
+        @include text($ff, 400, 1.6rem, 2.6rem, $white);
+        margin-bottom: 30px;
+    }
+}
+
+
