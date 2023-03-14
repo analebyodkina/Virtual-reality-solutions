@@ -2,7 +2,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	margin-bottom: 60px;
+	padding-bottom: 127px;
 	@include tablet {
 		flex-direction: column;
 		&__img {

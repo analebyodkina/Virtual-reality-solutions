@@ -5,6 +5,9 @@
 }
 html {
 	font-size: 10px;
+	@include mobile {
+		font-size: 7px;
+	}
 }
 body {
 	font-family: $ff;

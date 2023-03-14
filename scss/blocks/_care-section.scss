@@ -1,15 +1,23 @@
-.care-section {
-    display: grid;
-    gap: 57px;
-    &__row {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-    }    
+.care-section {    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include desktop-small {
+        display: none;
+    }   
+    &__img {
+        max-width: 557px; 
+        &:nth-child(even)  {
+            order: 2;      
+        } 
+    }   
     &__info {
-        max-width: 582px;        
-    }     
-    
+        max-width: 582px;
+        &:nth-child(even) {
+            order: 1;
+        }       
+    }
     &__title {
         @include text($ff, 700, 4.2rem, 5.5rem, $white);
         margin-bottom: 30px;
@@ -19,5 +27,7 @@
         margin-bottom: 30px;
     }
 }
+
+
 
 

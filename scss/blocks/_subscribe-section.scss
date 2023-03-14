@@ -7,11 +7,17 @@
     padding: 50px 155px 38px;
     text-align: center;
     margin-bottom: 98px;
+    @include mobile {
+        margin-bottom: 35px;
+    }
     @include tablet {
         padding: 50px 80px 38px;
     }
     @include tablet-small {
         padding-bottom: 150px;
+    }
+    @include mobile {
+        padding-inline: 15px;
     }
     &__title {
         @include text($ff, 700, 4.2rem, 5.5rem, $white);
