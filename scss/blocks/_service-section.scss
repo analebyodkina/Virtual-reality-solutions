@@ -20,7 +20,7 @@
 		color: $white;
 		transition: $transition;
 		&:hover {
-			box-shadow: 1px 1px 20px $white;
+			box-shadow: 1px 1px 40px $text;
 			transform: scale(1.05);
 		}
 	}

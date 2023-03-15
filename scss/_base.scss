@@ -39,11 +39,12 @@ body {
 	outline: 0;
 	cursor: pointer;
 	text-align: center;
-	@include btn-active;
-	transition: $transition;
-		&:hover {
-			text-decoration: underline;
-		}
+	position: relative;
+  	overflow: hidden;
+	@include btn-active;	
+	&:hover {
+		box-shadow: 1px 1px 20px $primary;
+	}	
 	&._primary {
 		background: $grad-btn;
 		border-radius: 5px;
