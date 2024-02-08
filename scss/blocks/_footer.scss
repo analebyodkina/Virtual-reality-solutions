@@ -1,153 +1,157 @@
 .footer {
-    &__logo {
-		display: flex;
-		align-items: center;
-		gap: 8px;
-		@include text($ff, 500, 2rem, 2.4rem, $white);
-        @include mobile {
-            display: none;
-        }
-	}
-    hr {        
-        color: $color-hr;
-        opacity: 0.2;
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    @include text($ff, 500, 2rem, 2.4rem, $white);
+    @include mobile {
+      display: none;
     }
+  }
+  hr {
+    color: $color-hr;
+    opacity: 0.2;
+  }
 }
 .top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding-bottom: 33px;
-    @include tablet {
-        padding-bottom: 10px;
-    }    
-    &__ul a{
-        @include text($ff, 400, 1.8rem, 4rem, $white);
-        opacity: 0.8; 
-        display: inline-block;
-        &.item-title {
-            font-weight: 500;
-        } 
-        &:after {
-            content: "";
-            background-color: $primary;
-            display: block;
-            height: 3px;
-            width: 0%;
-            position: relative;
-            top: 3px;
-            -webkit-transition: width .3s ease-in-out;
-            -moz--transition: width .3s ease-in-out;
-            transition: width .3s ease-in-out;
-        }
-        &:hover:after, &:focus:after {
-        width: 100%;
-        }        
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 33px;
+  @include tablet {
+    padding-bottom: 10px;
+  }
+  &__ul a {
+    @include text($ff, 400, 1.8rem, 4rem, $white);
+    opacity: 0.8;
+    display: inline-block;
+    &.item-title {
+      font-weight: 500;
     }
+    &:after {
+      content: "";
+      background-color: $primary;
+      display: block;
+      height: 3px;
+      width: 0%;
+      position: relative;
+      top: 3px;
+      -webkit-transition: width 0.3s ease-in-out;
+      -moz--transition: width 0.3s ease-in-out;
+      transition: width 0.3s ease-in-out;
+    }
+    &:hover:after,
+    &:focus:after {
+      width: 100%;
+    }
+  }
 }
 .item1 {
-    
-    &__ul {
-        margin: 15px 0;
-    li {
-        @include text($ff, 400, 1.6rem, 3.2rem, $white);
-        opacity: 0.8; 
-        padding-bottom: 10px;        
-        display: flex;
-        align-items: center;
+  &__ul {
+    margin: 15px 0;
+    li a{
+      @include text($ff, 400, 1.6rem, 3.2rem, $white);
+      opacity: 0.8;
+      padding-bottom: 10px;
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+      &:first-child:before {
+        content: url(../img/icons/location.svg);
+        display: inline-block;
+        width: 20px;
+        height: 18px;
         position: relative;
-        &:first-child:before {
-            content: url(../img/icons/location.svg);
-            display: inline-block;
-            width: 20px;
-            height: 18px;        
-            position: relative;
-            left: 0;        
-            top: 0;
-            margin-right: 10px;
-        }   
-        &:nth-child(2):before {
-            content: url(../img/icons/calling.svg);
-            display: inline-block;
-            width: 20px;
-            height: 18px;        
-            position: relative;
-            left: 0;        
-            top: 0;
-            margin-right: 10px;
-        }   
-        &:last-child:before {
-            content: url(../img/icons/message.svg);
-            display: inline-block;
-            width: 20px;
-            height: 18px;        
-            position: relative;
-            left: 0;        
-            top: 0;
-            margin-right: 10px;
-        }    
+        left: 0;
+        top: 0;
+        margin-right: 10px;
+      }
+      &:nth-child(2):before {
+        content: url(../img/icons/calling.svg);
+        display: inline-block;
+        width: 20px;
+        height: 18px;
+        position: relative;
+        left: 0;
+        top: 0;
+        margin-right: 10px;
+      }
+      &:last-child:before {
+        content: url(../img/icons/message.svg);
+        display: inline-block;
+        width: 20px;
+        height: 18px;
+        position: relative;
+        left: 0;
+        top: 0;
+        margin-right: 10px;
+      }
     }    
+  }
+  &__socials {
+    display: flex;
+    gap: 15px;
+    img {
+      border-radius: 50%;
     }
-	&__socials {
-        display: flex;
-        gap: 15px;
-        img {                        
-            border-radius: 50%;
-        }
-        img:hover {
-            transform: scale(1.1);
-            box-shadow: 1px 1px 10px $white;
-        }
-	}
+    img:hover {
+      transform: scale(1.1);
+      box-shadow: 1px 1px 10px $white;
+    }
+  }
 }
 ._item1 {
-    @include tablet {
-        display: flex;
-        flex-grow: 1;
-        justify-content: space-between;
-        align-items: center;
-    }
+  @include tablet {
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
-._item2, ._item3, ._item4, ._item5 {
-    @include tablet {
-        display: none;
-    }
-
+._item2,
+._item3,
+._item4,
+._item5 {
+  @include tablet {
+    display: none;
+  }
 }
 .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  padding: 35px 35px 35px 0;
+  @include mobile {
+    flex-direction: column;
+  }
+  &__ul {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 15px;
-    padding: 35px 35px 35px 0;
-    @include mobile {
-        flex-direction: column;
+    gap: 54px;
+  }
+  &__a {
+    @include text($ff, 400, 1.4rem, 1.4rem, $white);
+    opacity: 0.8;
+    &:after {
+      content: "";
+      background-color: $primary;
+      display: block;
+      height: 3px;
+      width: 0%;
+      position: relative;
+      top: 3px;
+      -webkit-transition: width 0.3s ease-in-out;
+      -moz--transition: width 0.3s ease-in-out;
+      transition: width 0.3s ease-in-out;
     }
-		&__ul {
-            display: flex;
-            gap: 54px;
-		}
-		&__a {
-            @include text($ff, 400, 1.4rem, 1.4rem, $white); 
-            opacity: 0.8;
-            &:after {
-                content: "";
-                background-color: $primary;
-                display: block;
-                height: 3px;
-                width: 0%;
-                position: relative;
-                top: 3px;
-                -webkit-transition: width .3s ease-in-out;
-                -moz--transition: width .3s ease-in-out;
-                transition: width .3s ease-in-out;
-            }
-            &:hover:after, &:focus:after {
-            width: 100%;
-            }
-		}
-        &__copyright {
-            @include text($ff, 400, 1.4rem, 1.4rem, $white); 
-            opacity: 0.8;            
-		}
+    &:hover:after,
+    &:focus:after {
+      width: 100%;
+    }
+  }
+  &__copyright {
+    @include text($ff, 400, 1.4rem, 1.4rem, $white);
+    opacity: 0.8;
+  }
 }
