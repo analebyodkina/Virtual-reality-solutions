@@ -57,7 +57,7 @@
         align-items: center;
         position: relative;
         &:first-child:before {
-            content: url('../img/icons/location.svg');
+            content: url(../img/icons/location.svg);
             display: inline-block;
             width: 20px;
             height: 18px;        
@@ -67,7 +67,7 @@
             margin-right: 10px;
         }   
         &:nth-child(2):before {
-            content: url('../img/icons/calling.svg');
+            content: url(../img/icons/calling.svg);
             display: inline-block;
             width: 20px;
             height: 18px;        
@@ -77,7 +77,7 @@
             margin-right: 10px;
         }   
         &:last-child:before {
-            content: url('../img/icons/message.svg');
+            content: url(../img/icons/message.svg);
             display: inline-block;
             width: 20px;
             height: 18px;        
