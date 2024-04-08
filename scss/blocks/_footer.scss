@@ -49,14 +49,10 @@
 .item1 {
   &__ul {
     margin: 15px 0;
-    li a{
-      @include text($ff, 400, 1.6rem, 3.2rem, $white);
-      opacity: 0.8;
-      padding-bottom: 10px;
+    li {
       display: flex;
       align-items: center;
-      position: relative;
-      z-index: 1;
+      padding-bottom: 10px;
       &:first-child:before {
         content: url(../img/icons/location.svg);
         display: inline-block;
@@ -87,7 +83,15 @@
         top: 0;
         margin-right: 10px;
       }
-    }    
+    }
+    li a {
+      @include text($ff, 400, 1.6rem, 3.2rem, $white);
+      opacity: 0.8;
+      display: flex;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
   }
   &__socials {
     display: flex;
