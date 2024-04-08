@@ -1068,16 +1068,18 @@ body {
             align-items: center;
     padding-bottom: 10px; }
     .item1__ul li:first-child:before {
-      content: url(../img/icons/location.svg);
+      content: " ";
+      background: url(../img/icons/location.svg) 0 0 / cover no-repeat;
       display: inline-block;
       width: 20px;
-      height: 18px;
+      height: 20px;
       position: relative;
       left: 0;
       top: 0;
       margin-right: 10px; }
     .item1__ul li:nth-child(2):before {
-      content: url(../img/icons/calling.svg);
+      content: " ";
+      background: url(../img/icons/calling.svg) 0 0 / cover no-repeat;
       display: inline-block;
       width: 20px;
       height: 18px;
@@ -1086,7 +1088,8 @@ body {
       top: 0;
       margin-right: 10px; }
     .item1__ul li:last-child:before {
-      content: url(../img/icons/message.svg);
+      content: " ";
+      background: url(../img/icons/message.svg) 0 0 / cover no-repeat;
       display: inline-block;
       width: 20px;
       height: 18px;
